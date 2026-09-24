@@ -1,0 +1,426 @@
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Chakra Petch", sans-serif;
+}
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+:root {
+  --primary: #cbfe1c;
+  --accent: #d5fe49;
+  --surface: #000000;
+  --text: #f1f1f1;
+  --muted: #8c8c8c;
+  --nav-color: #0b0e13;
+}
+*::selection {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.main-color {
+  color: var(--primary);
+}
+/*  ========================= start navbar ========================= */
+.navbar {
+  background-color: var(--nav-color);
+}
+.navbar .navbar-nav .nav-link,
+.navbar .navbar-toggler {
+  color: white;
+}
+
+.navbar .navbar-brand,
+.navbar .nav-link.active,
+.navbar .nav-item .nav-link:hover,
+.navbar .nav-text a:hover,
+.navbar .navbar-toggler:hover {
+  color: var(--primary);
+  transition: 0.5s;
+}
+.navbar .btn-back,
+#home .start-btn,
+#contact .btn-back {
+  background-color: var(--primary);
+}
+.navbar .btn-back,
+#home .start-btn,
+#home .watch-btn,
+#contact .btn-back {
+  background-size: 200% auto;
+  transition: 0.5s;
+}
+.navbar .btn-back:hover,
+#home .start-btn:hover,
+#home .watch-btn:hover,
+#contact .btn-back:hover {
+  background-image: linear-gradient(to right, #a4ce1a 0%, #dbff64 51%, #a4ce1a 100%);
+  background-position: left center;
+}
+
+/* ==================================== home =========================*/
+#home {
+  background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../images/hero-bg.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+h1.hero-title {
+  font-size: 4rem;
+  font-weight: 900;
+  font-family: "Days One", sans-serif;
+}
+h1 > span {
+  color: var(--primary);
+}
+
+.hero-img img {
+  border: 0.25rem solid transparent;
+  background:
+    linear-gradient(to right, #4de56b, #cbfe1c) padding-box,
+    linear-gradient(to right, #cbfe1c, #4de56b) border-box;
+}
+.badge-bg {
+  background-color: #0b0e13;
+}
+.watch-btn {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+
+.section-title h2 {
+  font-size: 3rem;
+  font-weight: 900;
+  font-family: "Days One", sans-serif;
+}
+.section-title .sec-title-span {
+  letter-spacing: 3px;
+  color: var(--primary);
+  position: relative;
+}
+.sec-title-span::before,
+.sec-title-span::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  height: 2px;
+  width: 80px;
+  background: #cbfe1c;
+}
+.sec-title-span::before {
+  left: -100px;
+  background: linear-gradient(90deg, transparent 0%, rgba(203, 254, 28, 1) 70%, rgba(203, 254, 28, 1) 94%);
+}
+.sec-title-span::after {
+  right: -100px;
+  background: linear-gradient(90deg, rgba(203, 254, 28, 1) 0%, rgba(203, 254, 28, 1) 40%, transparent 94%);
+}
+
+/* ================================================ our games ============================ */
+.top-layer {
+  background-color: #364b20;
+  font-size: 0.75rem;
+  transform: translateY(-200%);
+  transition: 0.5s;
+}
+.game-card-layer {
+  transition: 0.5s;
+}
+.game-card img {
+  transition: 0.5s;
+}
+.game-card:hover .game-card-layer {
+  background: linear-gradient(to top, var(--accent) 0%, rgba(0, 0, 0, 0) 60%);
+}
+.game-card:hover {
+  border: 2px solid var(--primary);
+}
+.game-card:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.2);
+}
+.game-card:hover .top-layer {
+  transform: translateY(0);
+}
+.game-card-layer h3 {
+  transform: translateY(220%);
+  transition: 0.5s;
+}
+.game-card:hover .game-card-layer h3 {
+  transform: translateY(0);
+}
+.game-indectators svg {
+  border: 2px solid gray;
+  color: gray;
+  transition: 0.3s;
+}
+.game-indectators svg:hover {
+  border: 2px solid var(--primary);
+  color: var(--primary);
+}
+.view-btn {
+  transition: 0.3s;
+  color: var(--primary);
+  border: 2px solid var(--primary);
+}
+.view-btn:hover {
+  color: var(--surface);
+  background-color: var(--primary);
+}
+
+/* ======================================== what we do =========================== */
+#what-we-do .colored {
+  color: var(--primary);
+}
+#what-we-do .section-title p {
+  font-size: 3rem;
+}
+#what-we-do .card {
+  background-color: #1a1a1a;
+}
+#what-we-do .card h3 {
+  font-weight: 900;
+  font-family: "Days One", sans-serif;
+}
+#what-we-do .card-body svg {
+  color: rgb(203, 254, 28);
+  background-color: rgb(41, 41, 63);
+  transition: 0.5s;
+}
+#what-we-do .card-body:hover svg {
+  color: var(--surface);
+  background-color: var(--primary);
+}
+.card-action {
+  transition: 0.5s;
+}
+.card-action:hover {
+  border: 2px solid var(--primary);
+}
+.card-action::after,
+.card-action::before {
+  position: absolute;
+  content: "";
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-width: 20px;
+  border-style: solid;
+  transition: 0.5s;
+  transform: rotate(45deg);
+  opacity: 0;
+}
+.card-action::after {
+  top: -8px;
+  left: -10px;
+  border-color: transparent var(--primary) transparent transparent;
+}
+.card-action::before {
+  bottom: -10px;
+  right: -5px;
+  border-color: transparent transparent transparent var(--primary);
+}
+.card-action:hover::after,
+.card-action:hover::before {
+  opacity: 1;
+}
+.card-action:hover::after {
+  top: 0;
+  left: 0;
+}
+.card-action:hover::before {
+  bottom: 0;
+  right: 0;
+}
+#what-we-do .container-fluid::after {
+  position: absolute;
+  content: "";
+  top: 105%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #ccff00 15%, #ccff00 90%, transparent 100%);
+  box-shadow:
+    0 0 12px #ccff00,
+    0 0 25px #ccff00;
+}
+/* ============ what we do animation ========= */
+.games-section {
+  background: radial-gradient(
+    ellipse 70% 60% at 50% 50%,
+    #c7f13a 0%,
+    rgba(239, 243, 1, 0.08) 70%,
+    rgba(7, 10, 18, 0) 80%
+  );
+}
+
+.slider-track {
+  width: max-content;
+  padding: 15px;
+}
+.aniamte-card {
+  width: 60px ;
+  height: 60px;
+}
+.track-left {
+  animation: scrollLeft 20s linear infinite;
+}
+.track-right {
+  animation: scrollRight 20s linear infinite;
+}
+@keyframes scrollLeft {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    transform: translate3d(-30%, 0, 0);
+  }
+}
+@keyframes scrollRight {
+  0% {
+    transform: translate3d(-30%, 0, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+}
+.slider-container::before,
+.slider-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100px;
+  z-index: 2;
+}
+.slider-container::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(53, 48, 48, 0.6) 0%, transparent 100%);
+}
+.slider-container::after {
+  right: 0;
+  background: linear-gradient(to right, rgba(53, 48, 48, 0.6) 0%, transparent 100%);
+}
+
+/* ============================================= our team ==================== */
+#ourteam .card {
+  background-color: #121212;
+  cursor: pointer;
+}
+#ourteam .card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  backdrop-filter: grayscale(100%);
+  z-index: 1;
+  transition: 0.5s;
+  transform: translateY(0);
+}
+#ourteam .card:hover::after {
+  transform: translateY(-100%);
+}
+.card-overlay {
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.3) 50%, transparent 80%);
+  z-index: 2;
+}
+.card-body {
+  bottom: 0;
+  z-index: 3;
+}
+.rotated-span {
+  right: 0;
+  bottom: 40px;
+  z-index: 3;
+  transform: rotate(90deg);
+}
+#ourteam .card-body span {
+  font-size: 0.75rem;
+  display: block;
+}
+#ourteam .card .card-body p:nth-child(2),
+.rotated-span {
+  transition: 0.5s;
+  color: #aaa4a4;
+  font-size: 0.875rem;
+}
+#ourteam .card:hover .card-body p:nth-child(2),
+#ourteam .card:hover .rotated-span {
+  color: var(--primary);
+}
+
+/* ============================================= contact us ================ */
+#contact {
+  background-color: #101625;
+}
+#contact .contact-1 .contact-1-item,
+.contact-2 {
+  background-color: #1e2939;
+}
+#contact .contact-1 .contact-1-item > div:first-child {
+  background-color: var(--primary);
+  width: 60px;
+  height: 60px;
+}
+.icon-container {
+  width: 50px;
+  height: 50px;
+}
+.icon-container:hover {
+  box-shadow: 0 0 50px 5px inset rgba(255 255 255/ 20%);
+}
+.contact-1 .contact-gradient {
+  background: #bffb2f;
+  background: linear-gradient(90deg, rgba(191, 251, 47, 1) 15%, rgba(56, 226, 110, 1) 100%);
+}
+form {
+  font-size: 0.875rem;
+}
+input[placeholder] {
+  font-size: 0.875rem;
+  color: #9399a2;
+}
+label {
+  color: #d1d5dc;
+}
+#contact input,
+select,
+#contact form textarea {
+  border: 1px solid gray;
+  background-color: #364153;
+  padding: 0.875rem;
+}
+input:focus,
+select:focus,
+#contact textarea:focus {
+  outline: 2px solid var(--primary);
+  border: none;
+}
+input[type="checkbox"] {
+  transform: scale(1.2);
+}
+
+/* ==================================== footer ==========================  */
+#footer .social a {
+  color: #adb4c0;
+  transition: 0.3s;
+}
+#footer a:hover {
+  color: var(--primary);
+}
+#footer,
+#contact {
+  padding: 6rem 2rem;
+}
