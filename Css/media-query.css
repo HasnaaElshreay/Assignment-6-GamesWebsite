@@ -1,8 +1,84 @@
+.section-title h2,
+#what-we-do .section-title p {
+  font-size: clamp(1.8rem, 4vw, 3rem);
+}
+#what-we-do .card h3,
+.game-card-layer h3 {
+  font-size: clamp(1.1rem, 2vw, 1.5rem);
+}
+body {
+  font-size: clamp(0.9rem, 1.2vw, 1rem);
+}
+img {
+  max-width: 100%;
+  object-fit: cover;
+}
+.hero-img img {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+.game-card img {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+}
+.game-card,
+#what-we-do .card,
+#ourteam .card {
+  width: 100%;
+  height: auto;
+}
+@media (max-width: 768px) {
+  #footer,
+  #contact {
+    padding: 3rem 1rem;
+  }
+}
 @media (min-width: 768px) {
-.aniamte-card {
+  #what-we-do .container-fluid::after {
+    top: 10%;
+  }
+  .aniamte-card {
     width: 130px;
     height: 130px;
     border-radius: 20px;
-    padding: 12px;
+    padding: 15px;
+  }
+}
+.slider-track {
+  width: max-content;
+}
+.aniamte-card {
+  width: 6rem;
+  height: 6rem;
+  padding: 20px;
+  border-radius: 0.75rem;
+}
+.aniamte-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 0.75rem;
+}
+.track-left {
+  animation: scrollLeft 30s linear infinite;
+}
+.track-right {
+  animation: scrollRight 30s linear infinite;
+}
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+@keyframes scrollRight {
+  from {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+  to {
+    transform: translateX(0);
   }
 }

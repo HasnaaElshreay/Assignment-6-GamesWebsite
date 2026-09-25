@@ -32,6 +32,9 @@ a {
 .main-color {
   color: var(--primary);
 }
+.transition {
+  transition: 0.3s;
+}
 /*  ========================= start navbar ========================= */
 .navbar {
   background-color: var(--nav-color);
@@ -40,8 +43,6 @@ a {
 .navbar .navbar-toggler {
   color: white;
 }
-
-.navbar .navbar-brand,
 .navbar .nav-link.active,
 .navbar .nav-item .nav-link:hover,
 .navbar .nav-text a:hover,
@@ -68,7 +69,6 @@ a {
   background-image: linear-gradient(to right, #a4ce1a 0%, #dbff64 51%, #a4ce1a 100%);
   background-position: left center;
 }
-
 /* ==================================== home =========================*/
 #home {
   background-image: linear-gradient(45deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.8)), url(../images/hero-bg.jpg);
@@ -84,7 +84,6 @@ h1.hero-title {
 h1 > span {
   color: var(--primary);
 }
-
 .hero-img img {
   border: 0.25rem solid transparent;
   background:
@@ -98,7 +97,6 @@ h1 > span {
   border: 2px solid var(--primary);
   color: var(--primary);
 }
-
 .section-title h2 {
   font-size: 3rem;
   font-weight: 900;
@@ -126,12 +124,14 @@ h1 > span {
   right: -100px;
   background: linear-gradient(90deg, rgba(203, 254, 28, 1) 0%, rgba(203, 254, 28, 1) 40%, transparent 94%);
 }
-
 /* ================================================ our games ============================ */
+.top-layer {
+  overflow: hidden;
+}
 .top-layer {
   background-color: #364b20;
   font-size: 0.75rem;
-  transform: translateY(-200%);
+  transform: translateY(-250%);
   transition: 0.5s;
 }
 .game-card-layer {
@@ -178,7 +178,6 @@ h1 > span {
   color: var(--surface);
   background-color: var(--primary);
 }
-
 /* ======================================== what we do =========================== */
 #what-we-do .colored {
   color: var(--primary);
@@ -246,7 +245,7 @@ h1 > span {
 #what-we-do .container-fluid::after {
   position: absolute;
   content: "";
-  top: 105%;
+  top: 101%;
   left: 50%;
   transform: translateX(-50%);
   width: 50%;
@@ -265,36 +264,9 @@ h1 > span {
     rgba(7, 10, 18, 0) 80%
   );
 }
-
-.slider-track {
-  width: max-content;
-  padding: 15px;
-}
 .aniamte-card {
-  width: 60px ;
+  width: 60px;
   height: 60px;
-}
-.track-left {
-  animation: scrollLeft 20s linear infinite;
-}
-.track-right {
-  animation: scrollRight 20s linear infinite;
-}
-@keyframes scrollLeft {
-  0% {
-    transform: translate3d(0, 0, 0);
-  }
-  100% {
-    transform: translate3d(-30%, 0, 0);
-  }
-}
-@keyframes scrollRight {
-  0% {
-    transform: translate3d(-30%, 0, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
-  }
 }
 .slider-container::before,
 .slider-container::after {
@@ -313,7 +285,6 @@ h1 > span {
   right: 0;
   background: linear-gradient(to right, rgba(53, 48, 48, 0.6) 0%, transparent 100%);
 }
-
 /* ============================================= our team ==================== */
 #ourteam .card {
   background-color: #121212;
@@ -360,7 +331,6 @@ h1 > span {
 #ourteam .card:hover .rotated-span {
   color: var(--primary);
 }
-
 /* ============================================= contact us ================ */
 #contact {
   background-color: #101625;
@@ -411,7 +381,6 @@ select:focus,
 input[type="checkbox"] {
   transform: scale(1.2);
 }
-
 /* ==================================== footer ==========================  */
 #footer .social a {
   color: #adb4c0;
