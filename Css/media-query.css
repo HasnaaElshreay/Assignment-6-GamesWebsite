@@ -13,11 +13,9 @@ img {
   max-width: 100%;
   object-fit: cover;
 }
-.hero-img img {
-  width: 100%;
-  max-width: 500px;
-  margin: 0 auto;
-}
+#home .hero-img img {
+    aspect-ratio: 4 / 3;
+  }
 .game-card img {
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -26,17 +24,26 @@ img {
 #what-we-do .card,
 #ourteam .card {
   width: 100%;
-  height: auto;
 }
 @media (max-width: 768px) {
   #footer,
   #contact {
     padding: 3rem 1rem;
   }
+  #home .hero-title {
+    font-size: 2rem;
+    white-space: normal;
+  }
+  #home p {
+    font-size: 0.95rem;
+  }
+  #home .badge-bg {
+    padding: 0.75rem 1rem;
+  }
 }
 @media (min-width: 768px) {
   #what-we-do .container-fluid::after {
-    top: 10%;
+    top: 105%;
   }
   .aniamte-card {
     width: 130px;
@@ -59,26 +66,4 @@ img {
   height: 100%;
   object-fit: contain;
   border-radius: 0.75rem;
-}
-.track-left {
-  animation: scrollLeft 30s linear infinite;
-}
-.track-right {
-  animation: scrollRight 30s linear infinite;
-}
-@keyframes scrollLeft {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(calc(-50% - 0.5rem));
-  }
-}
-@keyframes scrollRight {
-  from {
-    transform: translateX(calc(-50% - 0.5rem));
-  }
-  to {
-    transform: translateX(0);
-  }
 }

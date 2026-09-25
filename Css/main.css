@@ -393,3 +393,32 @@ input[type="checkbox"] {
 #contact {
   padding: 6rem 2rem;
 }
+
+/* what we do animation */
+.track-left {
+  animation: scrollLeft 30s linear infinite;
+}
+.track-right {
+  animation: scrollRight 30s linear infinite;
+}
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+}
+@keyframes scrollRight {
+  from {
+    transform: translateX(calc(-50% - 0.5rem));
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  #home .hero-title {
+    font-size: 2.8rem;
+  }
+}
